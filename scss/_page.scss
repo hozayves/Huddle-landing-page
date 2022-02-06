@@ -1,0 +1,92 @@
+body {
+    background-image: url('../images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-color: map-get($colors, 'violet');
+    background-position-y: top;
+    background-attachment: fixed;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: map-get($typography, 'body');
+    color: #fff;
+}
+.header {
+    min-width: 100%;
+    padding: 2rem 1rem 0 1.5rem;
+     &__logo {
+        width: 200px;
+     }
+}
+main {
+    max-width: 100%;
+}
+.main {
+    width:100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    &__content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 320px;
+        gap: 1rem;
+        padding: 0 1rem;
+        &__title {
+            text-transform: capitalize;
+            font-size: 1.5rem;
+            width: 270px;
+            font-family: map-get($typography, 'heading');
+            line-height: 1.6;
+            font-weight: 600;
+        }
+        &__text {
+            width: 280px;
+            font-size: 1rem;
+            opacity: 0.9;
+            border: 1px solid red;
+        }
+        &__btn {
+            border: none;
+            padding: 1rem 3rem;
+            text-transform: capitalize;
+            text-align: center;
+            font-weight: 400;
+            font-family: map-get($typography, 'heading');
+            border-radius: 30px;
+            width: 250px;
+            color: map-get($colors, 'violet');
+            background-color: #fff;
+            margin-top: 15px;
+            box-shadow: 2px 6px 12px -6px rgba(0,0,0,0.71);
+            &:hover {
+                color: #fff;
+                background-color: map-get($colors, 'soft-magenta');
+                cursor: pointer;
+                transition: all 0.5s ease-in-out;
+            }
+        }
+
+    }
+}
+.footer {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    i {
+        border: 2px solid #fff;
+        padding: 1rem;
+        border-radius: 50%;
+        margin-left: 1rem;
+        &:hover {
+            cursor: pointer;
+            color: map-get($colors, 'soft-magenta');
+            border-color: map-get($colors, 'soft-magenta');
+            transition: all 0.5s ease-in-out
+        }
+    }
+}
