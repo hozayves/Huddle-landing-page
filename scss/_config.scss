@@ -8,3 +8,10 @@ $typography: (
     'heading' : 'Poppins',
     'body' : 'Open Sans'
 );
+
+// Mixins for responsives
+@mixin ipad-screen {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
